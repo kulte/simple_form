@@ -103,7 +103,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should translate include blank when set to :translate' do
-    store_translations(:en, :simple_form => { :include_blank => { :user => {
+    store_translations(:en, :simple_form => { :include_blanks => { :user => {
       :age => 'Rather not say'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :include_blank => :translate
@@ -112,7 +112,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should translate include blank when set to :t' do
-    store_translations(:en, :simple_form => { :include_blank => { :user => {
+    store_translations(:en, :simple_form => { :include_blanks => { :user => {
       :age => 'Rather not say'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :include_blank => :t
@@ -121,7 +121,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should translate include blank with a particular key' do
-    store_translations(:en, :simple_form => { :include_blank => {
+    store_translations(:en, :simple_form => { :include_blanks => {
       :age => 'Rather not say',
       :user => { :age => 'Should be overridden' }
     } } ) do
@@ -131,7 +131,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should not translate include blank when set to a string' do
-    store_translations(:en, :simple_form => { :include_blank => { :user => {
+    store_translations(:en, :simple_form => { :include_blanks => { :user => {
       :age => 'Rather not say'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :include_blank => 'Young at heart'
@@ -140,7 +140,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should not translate include blank when automatically set' do
-    store_translations(:en, :simple_form => { :include_blank => { :user => {
+    store_translations(:en, :simple_form => { :include_blanks => { :user => {
       :age => 'Rather not say'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30
@@ -149,7 +149,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should not translate include blank when set to true' do
-    store_translations(:en, :simple_form => { :include_blank => { :user => {
+    store_translations(:en, :simple_form => { :include_blanks => { :user => {
       :age => 'Rather not say'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :include_blank => true
@@ -158,7 +158,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should not translate include blank when set to false' do
-    store_translations(:en, :simple_form => { :include_blank => { :user => {
+    store_translations(:en, :simple_form => { :include_blanks => { :user => {
       :age => 'Rather not say'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :include_blank => false
@@ -182,7 +182,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should translate prompt when set to :translate' do
-    store_translations(:en, :simple_form => { :prompt => { :user => {
+    store_translations(:en, :simple_form => { :prompts => { :user => {
       :age => 'Select age:'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :prompt => :translate
@@ -191,7 +191,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should translate prompt when set to :t' do
-    store_translations(:en, :simple_form => { :prompt => { :user => {
+    store_translations(:en, :simple_form => { :prompts => { :user => {
       :age => 'Select age:'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :prompt => :t
@@ -200,7 +200,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should translate prompt with a particular key' do
-    store_translations(:en, :simple_form => { :prompt => {
+    store_translations(:en, :simple_form => { :prompts => {
       :age => 'Select age:',
       :user => { :age => 'Should be overridden' }
     } } ) do
@@ -210,7 +210,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should not translate prompt when set to a string' do
-    store_translations(:en, :simple_form => { :prompt => { :user => {
+    store_translations(:en, :simple_form => { :prompts => { :user => {
       :age => 'Select age:'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :prompt => 'Do it:'
@@ -219,7 +219,7 @@ class CollectionSelectInputTest < ActionView::TestCase
   end
 
   test 'input should not translate prompt when set to false' do
-    store_translations(:en, :simple_form => { :prompt => { :user => {
+    store_translations(:en, :simple_form => { :prompts => { :user => {
       :age => 'Select age:'
     } } } ) do
       with_input_for @user, :age, :select, :collection => 18..30, :prompt => false
