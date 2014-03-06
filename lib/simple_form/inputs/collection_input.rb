@@ -20,7 +20,7 @@ module SimpleForm
       def input_options
         options = super
 
-        options[:include_blank] = true unless skip_include_blank?
+        options[:include_blank] = @attribute_name unless skip_include_blank?
 
         [:prompt, :include_blank].each do |key|
           translate_option options, key
